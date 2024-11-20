@@ -8,6 +8,6 @@ namespace ConsoleApp1.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity), Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public IList<Student>? Students { get; set; } = new List<Student>();
+        public IList<Student>? Students { get; set; }
     }
 }

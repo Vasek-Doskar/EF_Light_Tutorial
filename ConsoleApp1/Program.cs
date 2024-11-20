@@ -36,10 +36,10 @@ static void LoadRecords()
     using (var db = new Context())
     {
         // vytažení třídy I1B z databáze a připojení jejich závislých objektů (Studenti)
-        var I1B = db.Classrooms.Include(cls => cls.Students).FirstOrDefault(cls => cls.Name == "I1B");
+        Classroom? I1B = db.Classrooms.Include(cls => cls.Students).FirstOrDefault(cls => cls.Name == "I1B");
 
         // výpis žáků I1B, podle abecedy
-        I1B.Students.OrderBy(s => s.Name).ToList().ForEach(s => Console.WriteLine(s));
+        I1B?.Students?.OrderBy(s => s.Name).ToList().ForEach(s => Console.WriteLine(s));
         Console.WriteLine("\nHotovo!\n");
     }
 
