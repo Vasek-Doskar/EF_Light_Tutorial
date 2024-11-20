@@ -14,8 +14,8 @@ Console.ReadKey();
 //Console.ReadKey();
 //LoadRecords();
 //Console.ReadKey();
-//DeleteClsroom();
-//LoadRecords();
+DeleteClsroom();
+LoadRecords();
 
 
 

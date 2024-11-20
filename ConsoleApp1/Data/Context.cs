@@ -33,7 +33,7 @@ namespace ConsoleApp1.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // explicitní nastavení vazby 1:N
+            // explicitní nastavení vazby 1:N včetně kaskádového mazaní záznamů
             modelBuilder.Entity<Classroom>()
                 .HasMany(x => x.Students)
                 .WithOne(x => x.Clsroom)
