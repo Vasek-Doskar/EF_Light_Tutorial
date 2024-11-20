@@ -3,6 +3,8 @@ using ConsoleApp1.Models;
 using Microsoft.EntityFrameworkCore;
 
 
+// nainstalovat balíček přes PMC -> install-package microsoft.entityframeworkcore.sqlite
+
 CheckDb();
 
 LoadRecords();
