@@ -9,10 +9,13 @@ CheckDb();
 
 LoadRecords();
 Console.ReadKey();
+
 //DeleteStudentIfExists();
 //Console.ReadKey();
 //LoadRecords();
-
+//Console.ReadKey();
+//DeleteClsroom();
+//LoadRecords();
 
 
 
@@ -49,13 +52,11 @@ static void CreateRecords()
     {
         db.Classrooms.Add(new Classroom
         {
-            Id = default,
             Name = "I1B"
         });
 
         db.Classrooms.Add(new Classroom
         {
-            Id = default,
             Name = "EA2"
         });
 
@@ -87,5 +88,16 @@ static void DeleteStudentIfExists(int id = 1)
         {
             Console.WriteLine("\nZáznam neexistuje!\n");
         }
+    }
+}
+
+static void DeleteClsroom()
+{
+    using (var db = new Context())
+    {
+        Classroom i1b = db.Classrooms.First();
+        db.Remove(i1b);
+        db.SaveChanges();
+        Console.WriteLine("I1B již neexistuje");
     }
 }
