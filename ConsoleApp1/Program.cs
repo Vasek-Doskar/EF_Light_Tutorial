@@ -8,14 +8,14 @@ using Microsoft.EntityFrameworkCore;
 CheckDb();
 
 LoadRecords();
-Console.ReadKey();
 
+//Console.ReadKey();
 //DeleteStudentIfExists();
 //Console.ReadKey();
 //LoadRecords();
 //Console.ReadKey();
-DeleteClsroom();
-LoadRecords();
+//DeleteClsroom();
+//LoadRecords();
 
 
 

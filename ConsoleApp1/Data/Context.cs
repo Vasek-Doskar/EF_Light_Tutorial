@@ -22,7 +22,7 @@ namespace ConsoleApp1.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //base.OnConfiguring(optionsBuilder);
+            base.OnConfiguring(optionsBuilder);
 
             // vytvoření souboru + cesty k souboru, kam ukládat data
             optionsBuilder.UseSqlite("Data Source = MySQLDatabase.db");
